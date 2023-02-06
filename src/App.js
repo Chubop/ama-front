@@ -1,22 +1,17 @@
-import { Autocomplete, createTheme, CssBaseline, Grid, Input, TextField, ThemeProvider } from '@mui/material';
-import Content from './components/Content';
-import './style.css';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
+import { Routes, Route } from 'react-router-dom';
+import SignIn from './auth/SignIn';
+import Home from './components/Home';
+import './style.css'; 
 
 
 const theme = createTheme({
   typography: {
     fontFamily: [
       'Courier New'
-    ]
+    ],
   },
 });
-
-const options = [
-  "The quick brown fox jumps over the lazy dog",
-  "Hello, world!",
-  "Foo bar baz",
-  "Lorem ipsum dolor sit amet"
-];
 
 
 function App() {
@@ -25,25 +20,10 @@ function App() {
       <CssBaseline />
       <div className="App">
         <header className="App-header">
-          <Content style={{textAlign: 'center'}}>
-            <Grid item>Welcome!</Grid>
-            <Grid item>
-              Ask a question. I'll answer it - now, or later.
-            </Grid>
-            <Grid item sx={{width: '50%'}}>
-              <Autocomplete
-                options={options}
-                sx={{position: 'relative'}}
-                renderInput={params => (
-                  <TextField
-                    {...params}
-                    label="When do you close?"
-                    variant="outlined"
-                  />
-                )}
-              />
-            </Grid>
-          </Content>
+          <Routes>
+            <Route exact path="/" element={<Home/>}/>
+            <Route exact path="/signin" element={<SignIn/>}/>
+          </Routes>
         </header>
       </div>
     </ThemeProvider>
