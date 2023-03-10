@@ -1,0 +1,11 @@
+{
+    "name": "Professor X",
+    "snub": "profx",
+    "starter_questions": [
+        {"question": "What is the meaning of life?", "answer": "42"},
+        {"question": "How do I learn how to code?", "answer": "You can start with online tutorials."},
+        {"question": "What's the best way to stay motivated?", "answer": "Set achievable goals and reward yourself for meeting them"},
+        {"question": "How do I make friends?", "answer": "Join clubs and groups that interest you"},
+        {"question": "Why are black cats considered to be unlucky?", "answer": "Not sure"}
+    ]
+}

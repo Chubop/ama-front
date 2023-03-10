@@ -1,7 +1,7 @@
 import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
-import SignIn from './auth/SignIn';
-import Home from './components/Home';
+import CreatePage from './pages/CreatePage';
+import Home from './pages/Home';
 import './style.css'; 
 
 
@@ -22,7 +22,7 @@ function App() {
         <header className="App-header">
           <Routes>
             <Route exact path="/" element={<Home/>}/>
-            <Route exact path="/signin" element={<SignIn/>}/>
+            <Route exact path="/createpage" element={<CreatePage/>}/>
           </Routes>
         </header>
       </div>
